@@ -16,6 +16,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    QString flights[] = {"flight101", "fligt102", "flight103"};
+    int seats[] = {20, 50, 30};
+
+    QString uFlight = ui->lineEdit->text();
+    QString uFlight = ui->lineEdit_2->text();
 
 }
 
