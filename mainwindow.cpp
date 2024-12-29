@@ -24,21 +24,22 @@ void MainWindow::on_pushButton_clicked()
     QString uName = ui->lineEdit_2->text();
     bool found = false;
 
-    for(int i = 0;flights->length();i++)
+    for(int i = 0;i<flights->length();i++)
     {
         if(uFlight == flights[i] && seats[i] > 0)
         {
-            QMessageBox::information(this, "Success Message",
+            QMessageBox::information(this, "Success!",
                 "User Name: " +uName+"\n"
                 "Flight: "+flights[i]+"\n"
                 "Seat has been successfully reserved");
             found = true;
             break;
         }
-        else if(!found)
-        {
 
-        }
+    }
+    if(!found)
+    {
+        QMessageBox::information(this, "Error!!", "Incorrect Flight number or seats are unavailable");
     }
 }
 
